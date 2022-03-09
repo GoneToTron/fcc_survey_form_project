@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+<title>Survey</title>
 <head><link rel="stylesheet" href="style.css"></head>
-</body>
-<form>
-    <label for="name">First name:</label><br>
-    <input type="text" id="name" placeholder="Type your name"><br><br>
-    <label for="mail">eMail address:</label><br>
+<body>
+<div id="tablebox">
+<h1 id="title">Responsive Web Design Projects</h1>
+<p id="description">Build a Tribute Page</p>
+</div><br><br>
+<div id="tablebox">
+<form id="survey-form">
+    <label for="name" id="name-label">First name:</label><br>
+    <input type="text" id="name" placeholder="Type your name" required><br><br>
+    <label for="mail" id="email-label">eMail address:</label><br>
     <input type="email" name="email" id="email" placeholder="name@example.com" required autocomplete="email"><br><br>
-    <div>
-        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-        <label for="vehicle1"> I have a bike</label><br>
-        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-        <label for="vehicle2"> I have a car</label><br>
-        <input type="checkbox" id="vehicle3" name="vehicle3" value="Bicycle">
-        <label for="vehicle3"> I have a bicycle</label>
-    </div><br>
-    <div>
-        <input type="radio" id="stan1" name="stan1" value="new">
-        <label for="stan1"> New</label><br>
-        <input type="radio" id="stan2" name="stan2" value="used">
-        <label for="stan2">Used</label><br>
+    <div class="form-group">
+      <p>What do you wear?</p>
+      <label>
+        <input
+          name="user-recommend"
+          value="hat"
+          type="radio"
+          class="input-radio"
+          checked/>Hat
+        </label>
+      <label>
+        <input
+          name="user-recommend"
+          value="helmet"
+          type="radio"
+          class="input-radio">Helmet
+      </label>
+      <label>
+        <input
+          name="user-recommend"
+          value="dress"
+          type="radio"
+          class="input-radio"/>Dress
+      </label>
     </div><br>
     <div class="form-group">
         <p>You like it?</p>
@@ -29,9 +46,43 @@
           <option value="no">No</option>
         </select>
       </div><br>
-
-    <input type="submit" value="Submit">
-    
+      <div class="form-group">
+        <label id="number-label" for="number"
+          >Age<span class="clue">(optional)<br></span><br></label
+        >
+        <input
+          type="number"
+          name="age"
+          id="number"
+          min="10"
+          max="99"
+          class="form-control"
+          placeholder="Age"
+        />
+      </div><br>
+      <div class="form-group">
+        <p>Tell the poem</p>
+        <textarea
+          id="comments"
+          class="input-textarea"
+          name="comment"
+          placeholder="Enter your poem here..."
+        ></textarea>
+      </div><br>
+      <div>
+        <p>Wanna ride?</p>
+        <label
+        ><input
+          name="user-ride"
+          value="never"
+          type="checkbox">Never</label>
+        <label><input
+          name="user-ride"
+          value="with"
+          type="checkbox">With you?</label>
+      </div><br>
+    <input id="submit" type="submit" value="Submit" class="submit-button">
 </form>
-
+</div>
+</body>
 </html>
